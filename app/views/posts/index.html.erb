@@ -1,0 +1,10 @@
+<div class="container">
+    <h1 class="pb-3">Posts du blog</h1>
+    <%= posts.each do |post| %>
+        <h2><%= post.title %></h2>
+        <p><%= post.content %></p>
+        <p>
+          <a href="<%= post_path(post.id)%>" class="btn btn-primary">Lire la suite</a>
+        </p>
+    <% end %>
+</div>
